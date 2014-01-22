@@ -1,11 +1,12 @@
 
 library(VariantAnnotation)
+library(variants)
 
 genome = "GRCh37"
 vcf_paths = c(coding = "inst/raw/CosmicCodingMuts_v67_20131024.vcf.gz",
     non_coding = "inst/raw/CosmicNonCodingVariants_v67_20131024.vcf.gz")
 vcf_out_path = "inst/vcf/cosmic_67.vcf"
-vcf_out_name = "cosmic_67"
+vr_out_name = "cosmic_67"
 rda_out_path = "data/cosmic_67.rda"
 seq_info_path = "inst/ref/seq_info_GRCh37.rda"
 
@@ -21,8 +22,12 @@ process_vcf <- function(path, seq_info, genome_name = as.character(genome(seq_in
 vcf_list = lapply(vcf_paths, process_vcf, seq_info)
 vcf = sort(do.call(rbind, vcf_list))
 
-assign(vcf_out_name, vcf)
+vr = as(vcf, "VRanges")
+mcols(vr) = dfConvertColumns(mcols(vr), "character", "factor")
 
-save(list = vcf_out_name, file = rda_out_path, compress = "xz")
+assign(vr_out_name, vr)
+
+
+save(list = vr_out_name, file = rda_out_path, compress = "xz")
 
 writeVcf(vcf, vcf_out_path, index = TRUE)

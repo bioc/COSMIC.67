@@ -94,10 +94,14 @@ VCF data:
    chromosomes of 'GRCh37'.
     
 4. Merging of both objects, sorting according to genomic position.
+
+5. Converting the object to class =VariantAnnotation::VRanges=.
   
-5. Saving the merged object to 'data/cosmic_v67_vcf.rda'.
+6. Converting the 'character' columns to 'factors'.
+
+7. Saving the merged object to 'data/cosmic_v67_vcf.rda'.
   
-6. Exporting the merged object as a bgzipped and tabix-indexed 'VCF'
+8. Exporting the merged object as a bgzipped and tabix-indexed 'VCF'
    to 'inst/vcf/cosmic_v67.vcf.gz'.
   
 

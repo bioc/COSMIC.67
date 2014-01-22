@@ -1,0 +1,5 @@
+data/
+inst/raw/
+inst/ref/
+inst/vcf/
+inst/vep/

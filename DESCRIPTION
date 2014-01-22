@@ -1,3 +1,4 @@
+
 Package: COSMIC.67
 Type: Package
 Title: COSMIC.67
@@ -12,4 +13,4 @@ VignetteBuilder: knitr
 Description: COSMIC: Catalogue Of Somatic Mutations In Cancer, version 67 (2013-10-24)
 License: GPL-3
 LazyLoad: yes
-biocViews: AnnotationData, FunctionalAnnotation
+biocViews: ExperimentData, Cancer

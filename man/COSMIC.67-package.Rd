@@ -44,9 +44,13 @@
   
   4. Merging of both objects, sorting according to genomic position.
 
-  5. Saving the merged object to 'data/cosmic_v67_vcf.rda'.
+  5. Converting the object to class 'VariantAnnotation::VRanges'.
 
-  6. Exporting the merged object as a bgzipped and tabix-indexed 'VCF'
+  6. Converting all 'character' columns to 'factors'.
+
+  7. Saving the merged object to 'data/cosmic_v67_vcf.rda'.
+
+  8. Exporting the merged object as a bgzipped and tabix-indexed 'VCF'
   to 'inst/vcf/cosmic_v67.vcf.gz'.
 
   The following steps are performed for importing and processing of the
