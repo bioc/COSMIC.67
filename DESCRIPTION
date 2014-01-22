@@ -2,8 +2,8 @@
 Package: COSMIC.67
 Type: Package
 Title: COSMIC.67
-Version: 0.99.1
-Date: 2013-11-03
+Version: 0.99.2
+Date: 2014-01-22
 Author: Julian Gehring
 Maintainer: Julian Gehring <julian.gehring@embl.de>
 Imports: GenomicRanges, VariantAnnotation
@@ -12,5 +12,6 @@ Suggests: testthat, BiocStyle, knitr
 VignetteBuilder: knitr
 Description: COSMIC: Catalogue Of Somatic Mutations In Cancer, version 67 (2013-10-24)
 License: GPL-3
+Encoding: UTF-8
 LazyLoad: yes
 biocViews: ExperimentData, Cancer
